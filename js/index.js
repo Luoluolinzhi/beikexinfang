@@ -1,7 +1,5 @@
-$(function(){
-
-	var listdata = {
-		result: {
+$(function(){	
+	var	result= {
 			"status" : true ,
 	        "data":{
 	        	"house_info":{
@@ -121,7 +119,7 @@ $(function(){
 		                "attention_num":1982,
 		                "answer_num":98
 		            }
-			        ],
+			    ],
 		        "hotlists":[
 		            {
 		                "id":1,
@@ -137,16 +135,11 @@ $(function(){
 		                "address":"东城北京饭店",
 		                "uprice":62317
 		            }
-		        ],
+		        ]
 	        }
-		}
-    
-    
-    }
-	
-
+		}  
 	$.ajax({
-		url: "http://47.93.220.17/Home/Bk/xinfang",
+		url: "",
 		type: "get",
 		dataType: "json",
 		success: function(res){
@@ -160,7 +153,7 @@ $(function(){
 		error: function(res){
 			/*alert("网络错误");*/
 			var pagetitle = "";
-			pagetitle = "<h3>"+res.listdata.result.data.house_info.title+"</h3>";
+			pagetitle = "<h3>"+res.result.data.house_info.title+"</h3>";
 
 			$(".pagetitle").html(pagetitle);
 		
