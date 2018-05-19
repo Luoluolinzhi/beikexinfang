@@ -310,6 +310,7 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 				left: 0;
 				width: 3.7rem;
 				height: 3.7rem;
+				border-radius: 3.7rem;
 			}
 			.person_name img{
 				width: 0.8rem;
