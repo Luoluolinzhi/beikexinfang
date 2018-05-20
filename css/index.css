@@ -399,13 +399,17 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 			font-size: 1.3rem;
 			color: #9399A5;
 		}
+	.recommend_all{	
+		white-space: nowrap;
+		overflow-x: scroll;
+	}
 	.recommend_a{
 		margin-top: 1.6rem;
-		float: left;
+		display: inline-block;
 	}
 		.recommend_a img{
-			width: 14rem;
-			/*height: 14.6rem;*/
+			width: 19.5rem;
+			height: 14.6rem;
 			display: block;
 		}
 		.recommend_a h6{
