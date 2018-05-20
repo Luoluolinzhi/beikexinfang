@@ -399,10 +399,12 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 		}
 	.recommend_a{
 		margin-top: 1.6rem;
+		float: left;
 	}
 		.recommend_a img{
-			width: 19.5rem;
-			height: 14.6rem;
+			width: 14rem;
+			/*height: 14.6rem;*/
+			display: block;
 		}
 		.recommend_a h6{
 			color: #394043;
