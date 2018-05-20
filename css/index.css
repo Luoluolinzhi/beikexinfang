@@ -49,6 +49,7 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 			color: #B199FF;
 			line-height: 1.5rem;
 			border-radius: 0.2rem;
+			margin-left: 0.5rem;
 		}
 		.title .i_b{
 			display: inline-block;
@@ -60,6 +61,7 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 			color:  #00AE66;
 			line-height: 1.5rem;
 			border-radius: 0.2rem;
+			margin-left: 0.5rem;
 		}
 	.anothername{
 
