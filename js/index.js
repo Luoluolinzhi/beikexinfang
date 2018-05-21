@@ -13,12 +13,12 @@ $(function(){
 				$(".top").html(pageTop);
 
 				//房子类型
-				/*var t = res.data.typs_conditions;
+				var t = res.data.typs_conditions;
 				var pagetype = "";
 				for(x=0; x<t.length; x++){
 					pagetype += "<li>"+t[x].name+"</li>";
 				}
-				$(".type_all").html(pagetype);*/
+				$(".type_all").html(pagetype);
 
 				//评论
 				var pageComment = "";
@@ -65,8 +65,16 @@ $(function(){
 		"dataType": "json",
 		success: function(res){
 			if (res.error_code == 0) {
-				var str = "";
-
+				var houseInfo = "";
+				var h = res.data.house_lists;
+				for(var i=0;i<h.length;i++){
+					for(var j=0; j<h[i].tabs.length; j++){
+						var tabs="";
+						tabs += "<i class='house_detail_info_c'>"+h[i].tabs[j]+"</i>"
+					}
+					houseInfo += "<div class='house_detail_all'><div class='house_detail'><img src='"+h[i].image+"'><div class='house_detail_info'><h6>"+h[i].title+"</h6><i class='house_detail_info_a'>在售</i><i class='house_detail_info_b'>热门</i><p>建面191㎡/南北向</p>"+tabs+"<strong>约"+h[i].price+"万一套</strong></div></div></div>";
+				}
+				$(".houese_info").html(houseInfo);
 			}else{
 				alert(res.message);
 			}
@@ -80,27 +88,27 @@ $(function(){
 	$(".type_all li").click(function(){
 		$("li").removeClass("selected");
 		$(this).addClass("selected");
-		var index = $(this).index();
-		$(".houese_info .house_detail_all").eq(index).removeClass("hide").siblings().addClass("hide");
+		// var index = $(this).index();
+		// $(".houese_info .house_detail_all").eq(index).removeClass("hide").siblings().addClass("hide");
 		$.ajax({
-		"url": "http://47.93.220.17/Home/Bk/getListsByType",
-		"type": "get",
-		"dataType": "json",
-		data: {
-			type_id: 
-		},
-		success: function(res){
-			if (res.error_code == 0) {
-				var str = "";
+			"url": "http://47.93.220.17/Home/Bk/getListsByType",
+			"type": "get",
+			"dataType": "json",
+			"data": {
+				 
+			},
+			success: function(res){
+				if (res.error_code == 0) {
+					
 
-			}else{
-				alert(res.message);
+				}else{
+					alert(res.message);
+				}
+			},
+			error: function(res){
+				alert("网络错误");
 			}
-		},
-		error: function(res){
-			alert("网络错误");
-		}
-	});
+		});
 			
 	});
 })
