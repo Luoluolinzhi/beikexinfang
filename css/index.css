@@ -16,6 +16,9 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 	height: 0;
 	content: "";
 }
+.hide{
+	display: none;
+}
 .all{
 
 }
@@ -174,6 +177,9 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 			color: #101D37;
 			font-weight: 600;
 			line-height: 2.6rem;
+		}
+		.house_type .selected{
+			color: #3072F6;
 		}
 	.house_detail{
 		margin-top: 2rem;
@@ -406,6 +412,7 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 	.recommend_a{
 		margin-top: 1.6rem;
 		display: inline-block;
+		margin-right: 1rem;
 	}
 		.recommend_a img{
 			width: 19.5rem;

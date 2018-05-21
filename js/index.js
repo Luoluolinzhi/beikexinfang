@@ -13,12 +13,12 @@ $(function(){
 				$(".top").html(pageTop);
 
 				//房子类型
-				var t = res.data.typs_conditions;
+				/*var t = res.data.typs_conditions;
 				var pagetype = "";
 				for(x=0; x<t.length; x++){
 					pagetype += "<li>"+t[x].name+"</li>";
 				}
-				$(".type_all").html(pagetype);
+				$(".type_all").html(pagetype);*/
 
 				//评论
 				var pageComment = "";
@@ -59,5 +59,48 @@ $(function(){
 			
 		}
 	});
+	$.ajax({
+		"url": "http://47.93.220.17/Home/Bk/getListsByType",
+		"type": "get",
+		"dataType": "json",
+		success: function(res){
+			if (res.error_code == 0) {
+				var str = "";
 
+			}else{
+				alert(res.message);
+			}
+		},
+		error: function(res){
+			alert("网络错误");
+		}
+	});
+
+	//户型切换
+	$(".type_all li").click(function(){
+		$("li").removeClass("selected");
+		$(this).addClass("selected");
+		var index = $(this).index();
+		$(".houese_info .house_detail_all").eq(index).removeClass("hide").siblings().addClass("hide");
+		$.ajax({
+		"url": "http://47.93.220.17/Home/Bk/getListsByType",
+		"type": "get",
+		"dataType": "json",
+		data: {
+			type_id: 
+		},
+		success: function(res){
+			if (res.error_code == 0) {
+				var str = "";
+
+			}else{
+				alert(res.message);
+			}
+		},
+		error: function(res){
+			alert("网络错误");
+		}
+	});
+			
+	});
 })
