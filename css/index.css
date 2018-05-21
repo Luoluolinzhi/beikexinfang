@@ -209,6 +209,7 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 			height: 1.7rem;
 			background: rgba(0,174,102,0.15);
 			border-radius: 0.2rem;
+			margin-left: 0.5rem;
 		}
 		.house_detail_info .house_detail_info_b{
 			display: inline-block;
@@ -220,6 +221,7 @@ div,h3,h6,i,p,ul,li,img,strong,span{
 			background-image: linear-gradient(-164deg, #FF6F33 0%, #FA415F 100%);
 			box-shadow: 0 0.1rem 0.2rem 0 rgba(251,72,90,0.50);
 			border-radius: 0.8rem 0.2rem 0.8rem 0.2rem;
+			margin-left: 0.5rem;
 		}
 		.house_detail_info p{
 			font-size: 1.2rem;
